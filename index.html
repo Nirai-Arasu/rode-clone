@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "576px", //540px
+            md: "768px", //720px
+            lg: "992px", //960px
+            xl: "1200px", //1140px
+          },
+          extend: {
+            colors: {
+              sandal: "#ad9970",
+              light: "#f8f9fa",
+              blackFont: "#262626",
+              blackSecondary: "#00000080",
+              whiteSecondary: "#FFFFFF80",
+              greySecondary: "#767676",
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <!-- navabar -->
+      <!-- Desktop Navbar -->
+      <div class="top hidden xl:block border-b-[1px] py-[4px]">
+        <div
+          class="max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto flex justify-between items-center px-[15px]"
+        >
+          <span class="flex gap-[3px]"
+            ><img src="./resources/location.svg" alt="" />
+            <p class="text-[#6b6b6b] text-[.75em]">EN</p></span
+          >
+          <span><img src="./resources/profile.svg" alt="" /></span>
+        </div>
+      </div>
+      <div class="sticky top-0 hidden xl:block z-[100] bg-white">
+        <div
+          class="bottom sticky top-0 max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto flex items-center justify-between px-[15px]"
+        >
+          <div class="logo w-[86px]">
+            <img src="./resources/logo.svg" alt="" />
+          </div>
+          <ul
+            class="menu my-[25px] flex text-[.875em] font-normal leading-[24px]"
+          >
+            <li class="px-[24px] py-[8px]">PRODUCTS</li>
+            <li class="px-[24px] py-[8px]">USER GUIDES</li>
+            <li class="px-[24px] py-[8px]">SOLUTIONS</li>
+            <li class="px-[24px] py-[8px]">APPAREL</li>
+            <li class="px-[24px] py-[8px]">SUPPORT</li>
+          </ul>
+          <div class="search">
+            <img src="./resources/search.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Navbar -->
+      <nav
+        class="flex relative sticky bg-white top-0 z-[100] justify-between py-[12px] xl:hidden items-center"
+      >
+        <div class="left flex gap-[5px] items-center">
+          <div class="hamburger px-[16px]">
+            <img
+              src="./resources/hamburger.svg"
+              class="w-[13.3px] h-[16px] lg:h-[20px] lg:w-[17.5px]"
+              alt=""
+            />
+          </div>
+          <div class="location flex px-[8px] gap-[5px] items-center">
+            <div class="">
+              <img
+                src="./resources/location.svg"
+                class="w-[13px] h-[14px] lg:h-[18px]"
+                alt=""
+              />
+            </div>
+            <p
+              class="text-[15px] leading-[15px] lg:text-[20px] font-normal lg:leading-[20px]"
+            >
+              EN
+            </p>
+          </div>
+        </div>
+        <div class="absolute w-[100%]">
+          <div class="mx-auto w-[88px]">
+            <img src="./resources/logo.svg" alt="" />
+          </div>
+        </div>
+        <div class="right">
+          <div class="px-[16px]">
+            <img
+              class="h-[14px] lg:h-[27px]"
+              src="./resources/search.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </nav>
+
+      <!-- hero section -->
+      <div class="hero">
+        <!-- hero-1 -->
+        <section>
+          <!-- desktop-view -->
+          <div
+            class="hidden lg:block lg:relative h-auto xl:h-[700px] lg:h-[600px] bg-black"
+          >
+            <div
+              class="max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto"
+            >
+              <div class="flex flex-wrap">
+                <div
+                  class="absolute left bg-no-repeat bg-center w-[100%] h-[100%] left-0"
+                  style="background-image: url(./resources/hero-1.jpg)"
+                ></div>
+                <div
+                  class="right flex flex-wrap text-white ml-[50%] flex-col items-center z-10 h-auto xl:h-[700px] lg:h-[600px] justify-center gap-[16px] px-[16px]"
+                >
+                  <div class="w-[100%]">
+                    <img src="./resources/hero_1_headding.svg" alt="" />
+                  </div>
+                  <p class="text-[24px] font-semibold leading-[28.8px]">
+                    The Revolution Is Here
+                  </p>
+                  <p
+                    class="text-whiteSecondary text-[16px] font-normal leading-[24px] text-center"
+                  >
+                    The RØDECaster Pro II is the world's most powerful
+                    all-in-one audio solution for streamers, podcasters,
+                    musicians, and creators. Take your content to the next
+                    level.
+                  </p>
+                  <div class="mt-[32px]">
+                    <a
+                      href="#"
+                      class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                      >LEARN MORE</a
+                    >
+                    <button
+                      class="text-[16px] font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                    >
+                      BUY NOW
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile-view -->
+          <div class="lg:hidden bg-black">
+            <div class="flex flex-col items-center">
+              <img src="./resources/hero_2_mobile.jpg" alt="" />
+            </div>
+            <div
+              class="flex flex-col items-center gap-[16px] lg:hidden p-[16px]"
+            >
+              <div class="w-[100%]">
+                <img src="./resources/hero_1_headding.svg" alt="" />
+              </div>
+              <p
+                class="text-[24px] text-white text-center font-semibold leading-[28.8px] pt-[16px]"
+              >
+                The Revolution Is Here
+              </p>
+              <p
+                class="text-whiteSecondary text-[16px] font-normal leading-[24px] text-center text-justify sm:max-w-[66.66%] md:max-w-[100%] pb-[16px]"
+              >
+                The RØDECaster Pro II is the world's most powerful all-in-one
+                audio solution for streamers, podcasters, musicians, and
+                creators. Take your content to the next level.
+              </p>
+              <div class="mb-[16px]">
+                <a
+                  href="#"
+                  class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                  >LEARN MORE</a
+                >
+                <button
+                  class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- hero-2 -->
+        <section>
+          <!-- desktop-view -->
+          <div
+            class="hidden lg:block lg:relative h-auto xl:h-[700px] lg:h-[600px] bg-black"
+          >
+            <div
+              class="max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto"
+            >
+              <div class="flex flex-wrap">
+                <div
+                  class="absolute left bg-no-repeat bg-center w-[100%] h-[100%] left-0"
+                  style="background-image: url(./resources/hero-2.jpg)"
+                ></div>
+                <div
+                  class="right flex flex-wrap text-black mr-[50%] flex-col items-center z-10 h-auto xl:h-[700px] lg:h-[600px] justify-center gap-[16px] px-[16px]"
+                >
+                  <div class="w-[100%]">
+                    <img src="./resources/hero_2_heading.svg" alt="" />
+                  </div>
+                  <p class="text-[24px] font-semibold leading-[28.8px]">
+                    Your Search For The Perfect Headphones Is Over
+                  </p>
+                  <p
+                    class="text-blackSecondary text-[16px] font-normal leading-[24px] text-center"
+                  >
+                    Experience sound like never before with the NTH-100s.
+                    Exceptional sonic performance, superior comfort and iconic
+                    looks that inspires creativity.
+                  </p>
+                  <div class="mt-[32px]">
+                    <a
+                      href="#"
+                      class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                      >LEARN MORE</a
+                    >
+                    <button
+                      class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                    >
+                      BUY NOW
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile-view -->
+          <div
+            class="flex flex-col items-center bg-white gap-[16px] lg:hidden p-[16px]"
+          >
+            <div class="w-[100%]">
+              <img src="./resources/hero_2_heading.svg" alt="" />
+            </div>
+            <p
+              class="text-[24px] text-center text-black font-semibold leading-[28.8px] pt-[16px]"
+            >
+              Your Search For The Perfect Headphones Is Over
+            </p>
+            <p
+              class="text-blackSecondary text-[16px] font-normal leading-[24px] text-justify sm:max-w-[66.66%] md:max-w-[100%] pb-[16px]"
+            >
+              Experience sound like never before with the NTH-100s. Exceptional
+              sonic performance, superior comfort and iconic looks that inspires
+              creativity.
+            </p>
+            <div class="mb-[16px]">
+              <a
+                href="#"
+                class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                >LEARN MORE</a
+              >
+              <button
+                class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- hero-3 -->
+        <section>
+          <!-- desktop-view -->
+          <div
+            class="hidden lg:block lg:relative h-auto xl:h-[700px] lg:h-[600px] bg-black"
+          >
+            <div
+              class="max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto"
+            >
+              <div class="flex flex-wrap">
+                <div
+                  class="absolute left bg-no-repeat bg-center w-[100%] h-[100%] left-0"
+                  style="background-image: url(./resources/hero_3.jpg)"
+                ></div>
+                <div
+                  class="right flex flex-wrap text-black ml-[50%] flex-col items-center z-10 h-auto xl:h-[700px] lg:h-[600px] justify-center gap-[16px] px-[16px]"
+                >
+                  <div class="w-[100%]">
+                    <img src="./resources/hero_3_heading.svg" alt="" />
+                  </div>
+                  <p class="text-[24px] font-semibold leading-[28.8px]">
+                    Studio-Quality Recording, Made Simple
+                  </p>
+                  <p
+                    class="text-blackSecondary text-[16px] font-normal leading-[24px] text-center"
+                  >
+                    The NT-USB is a studio-quality USB condenser microphone that
+                    offers impeccable audio, elegant looks and premium features,
+                    all in an easy-to-use form factor, the NT-USB will have you
+                    sounding like a pro in seconds.
+                  </p>
+                  <div class="mt-[32px]">
+                    <a
+                      href="#"
+                      class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                      >LEARN MORE</a
+                    >
+                    <button
+                      class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                    >
+                      BUY NOW
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile-view -->
+          <div class="lg:hidden">
+            <div class="flex flex-col items-center">
+              <img src="./resources/hero_3_mobile.jpg" alt="" />
+            </div>
+            <div
+              class="flex flex-col items-center bg-white gap-[16px] p-[16px]"
+            >
+              <div class="w-[100%]">
+                <img src="./resources/hero_3_heading.svg" alt="" />
+              </div>
+              <p
+                class="text-[24px] text-center text-black font-semibold leading-[28.8px] pt-[16px]"
+              >
+                Studio-Quality Recording, Made Simple
+              </p>
+              <p
+                class="text-blackSecondary text-[16px] font-normal leading-[24px] text-justify sm:max-w-[66.66%] md:max-w-[100%] pb-[16px]"
+              >
+                The NT-USB is a studio-quality USB condenser microphone that
+                offers impeccable audio, elegant looks and premium features, all
+                in an easy-to-use form factor, the NT-USB will have you sounding
+                like a pro in seconds.
+              </p>
+              <div class="mb-[16px]">
+                <a
+                  href="#"
+                  class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                  >LEARN MORE</a
+                >
+                <button
+                  class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- hero-4 -->
+        <section>
+          <!-- desktop-view -->
+          <div
+            class="hidden lg:block lg:relative h-auto xl:h-[700px] lg:h-[600px] bg-black"
+          >
+            <div
+              class="max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto"
+            >
+              <div class="flex flex-wrap">
+                <div
+                  class="absolute left bg-no-repeat bg-center w-[100%] h-[100%] left-0"
+                  style="background-image: url(./resources/hero_4.jpg)"
+                ></div>
+                <div
+                  class="right flex flex-wrap text-white mr-[50%] flex-col items-center z-10 h-auto xl:h-[700px] lg:h-[600px] justify-center gap-[16px] px-[16px]"
+                >
+                  <div class="w-[100%]">
+                    <img src="./resources/hero_4_heading.svg" alt="" />
+                  </div>
+                  <p class="text-[24px] font-semibold leading-[28.8px]">
+                    Broadcast-grade Dynamic Microphone
+                  </p>
+                  <p
+                    class="text-whiteSecondary text-[16px] font-normal leading-[24px] text-center"
+                  >
+                    Give your voice that rich, broadcast sound with the PodMic.
+                    Perfect for livestreaming, voice-over, podcasting and
+                    gameplay.
+                  </p>
+                  <div class="mt-[32px]">
+                    <a
+                      href="#"
+                      class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                      >LEARN MORE</a
+                    >
+                    <button
+                      class="text-[16px] font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                    >
+                      BUY NOW
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile-view -->
+          <div class="lg:hidden">
+            <div class="flex flex-col items-center">
+              <img src="./resources/hero_4_mobile.jpg" alt="" />
+            </div>
+            <div
+              class="flex flex-col items-center gap-[16px] lg:hidden p-[16px]"
+            >
+              <div class="w-[100%]">
+                <img src="./resources/hero_4_mobile_heading .svg" alt="" />
+              </div>
+              <p
+                class="text-[24px] text-black text-center font-semibold leading-[28.8px] pt-[16px]"
+              >
+                Broadcast-grade Dynamic Microphone
+              </p>
+              <p
+                class="text-blackSecondary text-[16px] font-normal leading-[24px] text-center text-justify sm:max-w-[66.66%] md:max-w-[100%] pb-[16px]"
+              >
+                Give your voice that rich, broadcast sound with the PodMic.
+                Perfect for livestreaming, voice-over, podcasting and gameplay.
+              </p>
+              <div class="mb-[16px]">
+                <a
+                  href="#"
+                  class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                  >LEARN MORE</a
+                >
+                <button
+                  class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- hero-5 -->
+        <section>
+          <!-- desktop-view -->
+          <div
+            class="hidden lg:block lg:relative h-auto xl:h-[700px] lg:h-[600px] bg-black"
+          >
+            <div
+              class="max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto"
+            >
+              <div class="flex flex-wrap">
+                <div
+                  class="absolute left bg-no-repeat bg-center w-[100%] h-[100%] left-0"
+                  style="background-image: url(./resources/hero_5.jpg)"
+                ></div>
+                <div
+                  class="right flex flex-wrap text-white ml-[50%] flex-col items-center z-10 h-auto xl:h-[700px] lg:h-[600px] justify-center gap-[16px] px-[16px]"
+                >
+                  <div class="w-[100%]">
+                    <img src="./resources/hero_5_heading.svg" alt="" />
+                  </div>
+                  <p class="text-[24px] font-semibold leading-[28.8px]">
+                    Next Generation Wireless Audio
+                  </p>
+                  <p
+                    class="text-whiteSecondary text-[16px] font-normal leading-[24px] text-center"
+                  >
+                    The Wireless GO II is the world’s most powerful and
+                    versatile wireless microphone. With an unparalleled feature
+                    set and ultra-compact form factor, this is next generation
+                    wireless audio for every creator.
+                  </p>
+                  <div class="mt-[32px]">
+                    <a
+                      href="#"
+                      class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                      >LEARN MORE</a
+                    >
+                    <button
+                      class="text-[16px] font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                    >
+                      BUY NOW
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile-view -->
+          <div class="lg:hidden bg-white">
+            <div class="flex flex-col items-center">
+              <img src="./resources/hero_5_mobile.jpg" alt="" />
+            </div>
+            <div
+              class="flex flex-col items-center gap-[16px] lg:hidden p-[16px]"
+            >
+              <div class="w-[100%]">
+                <img src="./resources/hero_5_mobile_heading.svg" alt="" />
+              </div>
+              <p
+                class="text-[24px] text-black text-center font-semibold leading-[28.8px] pt-[16px]"
+              >
+                Next Generation Wireless Audio
+              </p>
+              <p
+                class="text-blackSecondary text-[16px] font-normal leading-[24px] text-center text-justify sm:max-w-[66.66%] md:max-w-[100%] pb-[16px]"
+              >
+                The Wireless GO II is the world’s most powerful and versatile
+                wireless microphone. With an unparalleled feature set and
+                ultra-compact form factor, this is next generation wireless
+                audio for every creator.
+              </p>
+              <div class="mb-[16px]">
+                <a
+                  href="#"
+                  class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                  >LEARN MORE</a
+                >
+                <button
+                  class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- hero-6 -->
+        <section>
+          <!-- desktop-view -->
+          <div
+            class="hidden lg:block lg:relative h-auto xl:h-[700px] lg:h-[600px] bg-black"
+          >
+            <div
+              class="max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto"
+            >
+              <div class="flex flex-wrap">
+                <div
+                  class="absolute left bg-no-repeat bg-center w-[100%] h-[100%] left-0"
+                  style="background-image: url(./resources/hero_6.jpg)"
+                ></div>
+                <div
+                  class="right flex flex-wrap text-white mr-[50%] flex-col items-center z-10 h-auto xl:h-[700px] lg:h-[600px] justify-center gap-[16px] px-[16px]"
+                >
+                  <div class="w-[100%]">
+                    <img src="./resources/hero_6_heading.svg" alt="" />
+                  </div>
+                  <p class="text-[24px] font-semibold leading-[28.8px]">
+                    Compact Sound, Incredibly Powerful
+                  </p>
+                  <p
+                    class="text-whiteSecondary text-[16px] font-normal leading-[24px] text-center"
+                  >
+                    The NT-USB Mini brings pristine studio sound to a compact
+                    USB microphone, and with RØDE Connect unlocking more power,
+                    more features and more control, it’s the perfect recording
+                    solution for podcasters, gamers and streamers.
+                  </p>
+                  <div class="mt-[32px]">
+                    <a
+                      href="#"
+                      class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                      >LEARN MORE</a
+                    >
+                    <button
+                      class="text-[16px] font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                    >
+                      BUY NOW
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile-view -->
+          <div class="lg:hidden">
+            <div class="flex flex-col items-center">
+              <img src="./resources/hero_6_mobile.jpg" alt="" />
+            </div>
+            <div
+              class="flex flex-col items-center gap-[16px] lg:hidden p-[16px]"
+            >
+              <div class="w-[100%]">
+                <img src="./resources/hero_6_mobile_heading.svg" alt="" />
+              </div>
+              <p
+                class="text-[24px] text-black text-center font-semibold leading-[28.8px] pt-[16px]"
+              >
+                Compact Sound, Incredibly Powerful
+              </p>
+              <p
+                class="text-blackSecondary text-[16px] font-normal leading-[24px] text-center text-justify sm:max-w-[66.66%] md:max-w-[100%] pb-[16px]"
+              >
+                The NT-USB Mini brings pristine studio sound to a compact USB
+                microphone, and with RØDE Connect unlocking more power, more
+                features and more control, it’s the perfect recording solution
+                for podcasters, gamers and streamers.
+              </p>
+              <div class="mb-[16px]">
+                <a
+                  href="#"
+                  class="text-sandal text-[16px] font-bold leading-[24px] px-[12px] py-[6px]"
+                  >LEARN MORE</a
+                >
+                <button
+                  class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- banner section -->
+      <div
+        class="max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto"
+      >
+        <div class="my-[30px] px-[15px]">
+          <!-- Banner heading -->
+          <div class="mb-[15px] py-[5px]">
+            <h1
+              class="text-[32px] font-semibold leading-[24px] text-greySecondary text-center"
+            >
+              Explore The RØDE Range
+            </h1>
+          </div>
+          <!-- Banners -->
+          <div class="mt-[15px] flex flex-col gap-y-[15px] mb-[15px]">
+            <!-- banner-1 -->
+            <div class="relative">
+              <a href="#">
+                <img src="./resources/banner-1.png" alt="" />
+                <div
+                  class="absolute w-[100%] h-[100%] top-0 flex justify-center"
+                >
+                  <img src="./resources/banner-1-heading.svg" alt="" />
+                </div>
+              </a>
+            </div>
+            <!-- banner-2 -->
+            <div class="relative">
+              <a href="#">
+                <img src="./resources/banner-2.jpg" alt="" />
+                <div
+                  class="absolute w-[100%] h-[100%] top-0 flex justify-center"
+                >
+                  <img src="./resources/banner-2-heading.svg" alt="" />
+                </div>
+              </a>
+            </div>
+            <!-- banner-3 -->
+            <div class="relative">
+              <a href="#">
+                <img src="./resources/banner-3.png" alt="" />
+                <div
+                  class="absolute w-[100%] h-[100%] top-0 flex justify-center"
+                >
+                  <img src="./resources/banner-3-heading.svg" alt="" />
+                </div>
+              </a>
+            </div>
+            <div class="relative">
+              <a href="#">
+                <img src="./resources/banner-4.png" alt="" />
+                <div
+                  class="absolute w-[100%] h-[100%] top-0 flex justify-center"
+                >
+                  <img src="./resources/banner-5-heading.svg" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Blog section -->
+      <section>
+        <div class="my-[30px] px-[15px]">
+          <h1
+            class="text-[32px] font-semibold leading-[24px] text-sandal text-center"
+          >
+            Latest From The RØDE Blog
+          </h1>
+        </div>
+        <div class="bg-light py-[48px]">
+          <div
+            class="max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto"
+          >
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-x-[32px] gap-y-[16px]"
+            >
+              <div
+                class="card bg-white flex flex-col ml-[16px] mr-[16px] items-center"
+              >
+                <div>
+                  <h3
+                    class="text-[24px] font-semibold md:text-[28px] text-blackFont font-semi-bold text-center xl:h-[90px] lg:h-[130px] md:h-[170px]"
+                  >
+                    XLR vs USB Microphones: Which is Best for You?
+                  </h3>
+                </div>
+                <div>
+                  <img src="./resources/blog-1.jpg" alt="" class="w-[100%]" />
+                </div>
+                <div>
+                  <p
+                    class="text-[16px] text-[#212529 ] font-normal p-[16px] my-[16px] grow text-center"
+                  >
+                    We explore the differences between XLR and USB microphones,
+                    the advantages of each and which type is best suited to your
+                    needs.
+                  </p>
+                </div>
+                <div class="my-[16px] py-[16px]">
+                  <button
+                    class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                  >
+                    LEARN MORE
+                  </button>
+                </div>
+              </div>
+              <div
+                class="card bg-white flex flex-col ml-[16px] mr-[16px] items-center"
+              >
+                <div>
+                  <h3
+                    class="text-[24px] font-semibold md:text-[28px] text-blackFont font-semi-bold text-center xl:h-[90px] lg:h-[130px] md:h-[170px]"
+                  >
+                    The Difference Between Large-Diaphragm and Small-Diaphragm
+                    Condenser Microphones
+                  </h3>
+                </div>
+                <div>
+                  <img src="./resources/blog-2.jpeg" alt="" class="w-[100%]" />
+                </div>
+                <div>
+                  <p
+                    class="text-[16px] text-[#212529 ] font-normal p-[16px] my-[16px] grow text-center"
+                  >
+                    We explore the difference between large- and small-diaphragm
+                    condenser microphones, and what each is best used for.
+                  </p>
+                </div>
+                <div class="my-[16px] py-[16px]">
+                  <button
+                    class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                  >
+                    LEARN MORE
+                  </button>
+                </div>
+              </div>
+              <div
+                class="card bg-white flex flex-col ml-[16px] mr-[16px] items-center"
+              >
+                <div>
+                  <h3
+                    class="text-[24px] font-semibold md:text-[28px] text-blackFont font-semi-bold text-center xl:h-[90px] lg:h-[130px] md:h-[170px]"
+                  >
+                    What is a Condenser Microphone and When to Use One
+                  </h3>
+                </div>
+                <div>
+                  <img src="./resources/blog-3.jpg" alt="" class="w-[100%]" />
+                </div>
+                <div>
+                  <p
+                    class="text-[16px] text-[#212529 ] font-normal p-[16px] my-[16px] grow text-center"
+                  >
+                    Learn more about the different types of condenser mics, how
+                    they work and the best applications for using them.
+                  </p>
+                </div>
+                <div class="my-[16px] py-[16px]">
+                  <button
+                    class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                  >
+                    LEARN MORE
+                  </button>
+                </div>
+              </div>
+              <div
+                class="card bg-white flex flex-col ml-[16px] mr-[16px] items-center"
+              >
+                <div>
+                  <h3
+                    class="text-[24px] font-semibold md:text-[28px] text-blackFont font-semi-bold text-center xl:h-[90px] lg:h-[130px] md:h-[170px]"
+                  >
+                    Firmware Version 1.0.7 for the RØDECaster Pro II is
+                    Available Now
+                  </h3>
+                </div>
+                <div>
+                  <img src="./resources/blog-4.jpg" alt="" class="w-[100%]" />
+                </div>
+                <div>
+                  <p
+                    class="text-[16px] text-[#212529 ] font-normal p-[16px] my-[16px] grow text-center"
+                  >
+                    Firmware version 1.0.7 includes key feature additions, such
+                    as custom routing for USB and Bluetooth outputs, and more.
+                  </p>
+                </div>
+                <div class="my-[16px] py-[16px]">
+                  <button
+                    class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                  >
+                    LEARN MORE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="pt-[100px]">
+        <div class="my-[16px]">
+          <hr class="my-[16px]" />
+          <div
+            class="text-[#484848] my-[48px] mt-[64px] px-[15px] max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] mx-auto"
+          >
+            <div class="flex flex-col lg:flex-row gap-y-[16px]">
+              <div class="basis-2/12 mx-auto">
+                <img src="./resources/footer-logo.svg" class="mx-auto" alt="" />
+              </div>
+              <div class="hidden sm:flex basis-6/12 px-[16px] justify-between">
+                <ul
+                  class="text-[16px] grow flex flex-col gap-[18px] grow basis-0"
+                >
+                  <p class="text-[16px] font-semibold leading-[24px]">
+                    Products
+                  </p>
+                  <li>Microphones</li>
+                  <li>Headphones</li>
+                  <li>Interfaces and Mixers</li>
+                  <li>Accessories</li>
+                  <li>Software</li>
+                  <li>Apparel</li>
+                </ul>
+                <ul class="grow grow flex flex-col gap-[18px] grow basis-0">
+                  <p class="text-[16px] font-semibold leading-[24px]">
+                    Support
+                  </p>
+                  <li>Contact RØDE</li>
+                  <li>Service Centre</li>
+                  <li>Warranty</li>
+                  <li>Where to Buy</li>
+                </ul>
+                <div class="grow grow flex flex-col gap-[18px] grow basis-0">
+                  <ul class="grow flex flex-col gap-[18px]">
+                    <p class="text-[16px] font-semibold leading-[24px]">
+                      Company
+                    </p>
+                    <li>About RØDE</li>
+                    <li>News and Info</li>
+                    <li>Job Opportunities</li>
+                  </ul>
+                  <ul class="grow flex flex-col gap-[18px]">
+                    <p class="text-[16px] font-semibold leading-[24px]">
+                      Account
+                    </p>
+                    <li>Manage your Account</li>
+                    <li>Create Account</li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="sm:hidden flex flex-col text-[16px] font-semibold text-[#484848] my-[48px]"
+              >
+                <ul>
+                  <li class="border-y border-[#b7b7b7] p-[16px] flex">
+                    <p class="grow">Products</p>
+
+                    <img src="./resources/plus.svg" alt="" />
+                  </li>
+                  <li class="border-b border-[#b7b7b7] p-[16px] flex">
+                    <p class="grow">Support</p>
+                    <img src="./resources/plus.svg" alt="" />
+                  </li>
+                  <li class="border-b border-[#b7b7b7] p-[16px] flex">
+                    <p class="grow">Company</p>
+                    <img src="./resources/plus.svg" alt="" />
+                  </li>
+                  <li class="border-b border-[#b7b7b7] p-[16px] flex">
+                    <p class="grow">Account</p>
+                    <img src="./resources/plus.svg" alt="" />
+                  </li>
+                </ul>
+              </div>
+              <div class="text-center lg:text-right flex-col basis-4/12">
+                <h1
+                  class="text-[26px] font-semibold leading-[34px] mb-[16px] text-blackFont"
+                >
+                  Subscribe to our latest news and offers
+                </h1>
+                <button
+                  class="text-[16px] text-white font-bold leading-[24px] rounded-full bg-sandal py-[6px] px-[22px]"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+            <hr class="my-[16px]" />
+            <div
+              class="flex flex-col lg:flex-row flex-start lg:items-center lg:justify-between gap-[16px]"
+            >
+              <div class="order-3 lg:order-1">
+                <p class="text-[.875em] tracking-[-.015em] text-center">
+                  © 2022 RØDE All Rights Reserved.
+                </p>
+              </div>
+              <div
+                class="text-[.75em] tracking-[-.015em] flex gap-[16px] order-1 lg:order-2 justify-center"
+              >
+                <p>Privacy Policy</p>
+                <p class="text-[1em]">|</p>
+                <p>Terms & Conditions</p>
+              </div>
+              <div
+                class="order-2 lg:order-3 flex basis-4/6 lg:basis-2/12 justify-between max-w-[66.66667%] ml-[16.6666%]"
+              >
+                <img src="./resources/fb.svg" alt="" />
+                <img src="./resources/twitter.svg" alt="" />
+                <img src="./resources/instagram.svg" alt="" />
+                <img src="./resources/youtube.svg" alt="" />
+                <img src="./resources/tik-tok.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
